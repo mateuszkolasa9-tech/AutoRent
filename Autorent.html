@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoRent - Wypożyczalnia Samochodów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>AutoRent</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Strona główna</a></li>
+                    <li><a href="#categories">Kategorie</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#reservation">Rezerwacja</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Wypożycz samochód szybko i wygodnie</h2>
+            <p>Nowoczesna flota samochodów osobowych i busów dostępna 24/7.</p>
+            <a href="#reservation" class="btn">Zarezerwuj teraz</a>
+        </div>
+    </section>
+
+    <section id="categories" class="container section">
+        <h2>Kategorie pojazdów</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="Samochód osobowy">
+                <h3>Samochody osobowe</h3>
+                <p>Komfortowe auta miejskie i rodzinne.</p>
+                <span>Od 180 zł/dzień</span>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1200&auto=format&fit=crop" alt="SUV">
+                <h3>SUV</h3>
+                <p>Idealne na dłuższe trasy i wakacje.</p>
+                <span>Od 260 zł/dzień</span>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=1200&auto=format&fit=crop" alt="Bus">
+                <h3>Busy</h3>
+                <p>Busy 7-9 osobowe dla większych grup.</p>
+                <span>Od 350 zł/dzień</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery section">
+        <div class="container">
+            <h2>Galeria</h2>
+
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="Auto 1">
+                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" alt="Auto 2">
+                <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1200&auto=format&fit=crop" alt="Auto 3">
+                <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop" alt="Auto 4">
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="container section">
+        <h2>Rezerwacja auta</h2>
+
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="category">Wybierz kategorię auta</label>
+                <select id="category" required>
+                    <option value="180">Samochód osobowy - 180 zł/dzień</option>
+                    <option value="260">SUV - 260 zł/dzień</option>
+                    <option value="350">Bus - 350 zł/dzień</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pickup">Data odbioru</label>
+                <input type="date" id="pickup" required>
+            </div>
+
+            <div class="form-group">
+                <label for="return">Data zwrotu</label>
+                <input type="date" id="return" required>
+            </div>
+
+            <button type="submit" class="btn">Oblicz koszt</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </section>
+
+    <footer>
+        <p> 2026 AutoRent - Wszelkie prawa zastrzeżone</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
